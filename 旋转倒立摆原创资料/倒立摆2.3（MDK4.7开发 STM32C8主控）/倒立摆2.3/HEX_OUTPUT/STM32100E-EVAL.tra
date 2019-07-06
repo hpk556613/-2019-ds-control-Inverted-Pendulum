@@ -1,0 +1,45 @@
+*** Creating Trace Output File '..\..\..\HEX_OUTPUT\STM32100E-EVAL.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"..\..\..\hex_output\stm32f10x_it.o"'
+### List of Objects: adding '"..\..\..\hex_output\main.o"'
+### List of Objects: adding '"..\..\..\hex_output\stm32f10x_rcc.o"'
+### List of Objects: adding '"..\..\..\hex_output\stm32f10x_gpio.o"'
+### List of Objects: adding '"..\..\..\hex_output\misc.o"'
+### List of Objects: adding '"..\..\..\hex_output\stm32f10x_usart.o"'
+### List of Objects: adding '"..\..\..\hex_output\stm32f10x_exti.o"'
+### List of Objects: adding '"..\..\..\hex_output\core_cm3.o"'
+### List of Objects: adding '"..\..\..\hex_output\system_stm32f10x.o"'
+### List of Objects: adding '"..\..\..\hex_output\startup_stm32f10x_hd_vl.o"'
+### List of Objects: adding '"..\..\..\hex_output\led.o"'
+### List of Objects: adding '"..\..\..\hex_output\usart1.o"'
+### List of Objects: adding '"..\..\..\hex_output\delay.o"'
+### List of Objects: adding '"..\..\..\hex_output\inv_mpu.o"'
+### List of Objects: adding '"..\..\..\hex_output\inv_mpu_dmp_motion_driver.o"'
+### List of Objects: adding '"..\..\..\hex_output\ioi2c.o"'
+### List of Objects: adding '"..\..\..\hex_output\oled.o"'
+### List of Objects: adding '"..\..\..\hex_output\timer.o"'
+### List of Objects: adding '"..\..\..\hex_output\mpu6050.o"'
+### List of Objects: adding '"..\..\..\hex_output\usart3.o"'
+### List of Objects: adding '"..\..\..\hex_output\key.o"'
+### List of Objects: adding '"..\..\..\hex_output\adc.o"'
+### List of Objects: adding '"..\..\..\hex_output\filter.o"'
+### List of Objects: adding '"..\..\..\hex_output\datascope_dp.o"'
+### List of Objects: adding '"..\..\..\hex_output\show.o"'
+### List of Objects: adding '"..\..\..\hex_output\minibalance.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "..\..\..\hex_output\stm32f10x_it.o" "..\..\..\hex_output\main.o" "..\..\..\hex_output\stm32f10x_rcc.o" "..\..\..\hex_output\stm32f10x_gpio.o" "..\..\..\hex_output\misc.o" "..\..\..\hex_output\stm32f10x_usart.o" "..\..\..\hex_output\stm32f10x_exti.o" "..\..\..\hex_output\core_cm3.o" "..\..\..\hex_output\system_stm32f10x.o" "..\..\..\hex_output\startup_stm32f10x_hd_vl.o" "..\..\..\hex_output\led.o" "..\..\..\hex_output\usart1.o" "..\..\..\hex_output\delay.o" "..\..\..\hex_output\inv_mpu.o" "..\..\..\hex_output\inv_mpu_dmp_motion_driver.o" "..\..\..\hex_output\ioi2c.o" "..\..\..\hex_output\oled.o" "..\..\..\hex_output\timer.o" "..\..\..\hex_output\mpu6050.o" "..\..\..\hex_output\usart3.o" "..\..\..\hex_output\key.o" "..\..\..\hex_output\adc.o" "..\..\..\hex_output\filter.o" "..\..\..\hex_output\datascope_dp.o" "..\..\..\hex_output\show.o" "..\..\..\hex_output\minibalance.o" 
+--library_type=microlib --strict --scatter "..\..\..\HEX_OUTPUT\STM32100E-EVAL.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\STM32100E-EVAL\STM32100E-EVAL.map" -o ..\..\..\HEX_OUTPUT\STM32100E-EVAL.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '..\..\..\HEX_OUTPUT\STM32100E-EVAL.axf'
+### ADS-LD Command File: '..\..\..\HEX_OUTPUT\STM32100E-EVAL.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '..\..\..\HEX_OUTPUT\STM32100E-EVAL.lnp', Handle=0x00000D28
+### Writing '.lnp' file
+### ADS-LD Command file '..\..\..\HEX_OUTPUT\STM32100E-EVAL.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

@@ -1,0 +1,5 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I..\ -I..\..\..\Libraries\CMSIS\CM3\CoreSupport -I..\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\..\..\drivers -I..\..\..\drivers\OLED -I..\MDK-ARM -I..\..\..\drivers\TIMER -I..\..\..\drivers\KEY -I..\..\..\drivers\ADC -I..\..\..\drivers\DataScope_DP -I..\..\..\drivers\delay -I..\..\..\drivers\DMP -I..\..\..\drivers\filter -I..\..\..\drivers\IIC -I..\..\..\drivers\led -I..\..\..\drivers\MiniBalance -I..\..\..\drivers\MPU6050 -I..\..\..\drivers\show -I..\..\..\drivers\usart1 -I..\..\..\drivers\usart3 
+-I D:\Keil\ARM\RV31\INC 
+-I D:\Keil\ARM\CMSIS\Include 
+-I D:\Keil\ARM\Inc\ST\STM32F10x 
+-DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o "..\..\..\HEX_OUTPUT\timer.o" --omf_browse "..\..\..\HEX_OUTPUT\timer.crf" --depend "..\..\..\HEX_OUTPUT\timer.d" "..\..\..\drivers\TIMER\timer.c"
