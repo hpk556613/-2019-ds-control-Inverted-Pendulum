@@ -157,7 +157,7 @@ int main(void)
 	HAL_TIM_Base_Start_IT(&htim3);
 	HAL_TIM_Encoder_Start(&htim4,TIM_CHANNEL_ALL);	
 //	PID_Init(&Motor_AnglePID, Angle_KP, Angle_KI,Angle_KD);
-	PID_Init(&Motor_PostionPID, Position_KP, Position_KI,Position_KD);
+//	PID_Init(&Motor_PostionPID, Position_KP, Position_KI,Position_KD);
 	printf("----这是一个ADC单通道电压采集+按键中断+定时器1 实验-----\n"); 
   /* USER CODE END 2 */
 

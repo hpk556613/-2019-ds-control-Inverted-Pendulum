@@ -30,14 +30,16 @@ void PID_Init(PIDStruct * pidStuc, float kp, float ki, float kd)
 **************************************************************************/
 int Inc_PID_Calc1(PIDStruct * pidStuc,int NextPoint)
 {
-  int iError1,iIncpid1;                                 //当前误差
-  iError1=NextPoint-pidStuc->SetPoint;                    //增量计算
-  iIncpid1=(pidStuc->Proportion * iError1)                 //E[k]项
-           +(pidStuc->Derivative * pidStuc->PrevError);  //E[k-2]-E[k-1]项
+  int iError,iIncpid;                                 //当前误差
+  iError=pidStuc->SetPoint-NextPoint;
+  pidStuc->LastErrorSum+=iError;
+  iIncpid=(pidStuc->Proportion * iError)                 //E[k]项
+              +(pidStuc->Integral * pidStuc->LastErrorSum)     //E[k-1]项
+              +(pidStuc->Derivative * pidStuc->PrevError);  //E[k-2]项
               
   pidStuc->PrevError=pidStuc->LastError;                    //存储误差，用于下次计算
-  pidStuc->LastError=iError1;
-  return(iIncpid1);                                    //返回增量值
+  pidStuc->LastError=iError;
+  return(iIncpid);                                    //返回增量值
 }
 
 
@@ -49,14 +51,17 @@ int Inc_PID_Calc1(PIDStruct * pidStuc,int NextPoint)
 **************************************************************************/
 int Inc_PID_Calc2(PIDStruct * pidStuc,int NextPoint)
 {
-   int iError,iIncpid2;                                 //当前误差
+   int iError,iIncpid;                                 //当前误差
   iError=pidStuc->SetPoint-NextPoint;
-  pidStuc->LastErrorSum+=iError;
-  iIncpid2=(pidStuc->Proportion * iError)                 //E[k]项
-              +(pidStuc->Integral * pidStuc->LastErrorSum)     //E[k-1]项
-              +(pidStuc->Derivative * pidStuc->PrevError);  //E[k-2]项
-              
-  return(iIncpid2);   
+  iIncpid=(pidStuc->Proportion * iError-pidStuc->PrevError)                 //E[k]项
+              +(pidStuc->Integral * iError)     //E[k-1]项
+              +(pidStuc->Derivative * (iError-2*pidStuc->PrevError+pidStuc->Prev_Last_Error));  //E[k-2]项
+	
+	pidStuc->Prev_Last_Error=pidStuc->PrevError;
+  pidStuc->PrevError=pidStuc->LastError;                    //存储误差，用于下次计算
+  pidStuc->LastError=iError;
+
+  return(iIncpid);   
 }
 
 

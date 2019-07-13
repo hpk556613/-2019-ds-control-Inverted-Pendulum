@@ -20,7 +20,7 @@
 //#define	Angle_KD 			0
 #define	Position_KP 		1
 #define	Position_KI 		0.005
-#define Position_KD 		0	 //PID系数
+#define Position_KD 		0	 //PID系数【增量式P:1.3//I0.01】
 
 typedef volatile struct __PIDStruct
 {
@@ -31,6 +31,7 @@ typedef volatile struct __PIDStruct
 	float LastError;
 	float PrevError;
 	float LastErrorSum;
+	float Prev_Last_Error;
 }PIDStruct;  
 
 extern PIDStruct Motor_AnglePID;

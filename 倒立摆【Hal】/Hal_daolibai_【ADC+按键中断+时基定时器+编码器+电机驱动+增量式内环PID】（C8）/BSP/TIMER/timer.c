@@ -44,9 +44,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 //				PID_SetPoint(&Motor_PostionPID,Para1);
 					
 
+	
 					Encoder_Balance=Read_Encoder(4);             	        	//===更新编码器位置信息
 					Para2=Inc_PID_Calc2(&Motor_PostionPID,Encoder_Balance);  /* 计数得到位置式PID的增量数值 */	
-					Moto=Para2;
+					Moto+=Para2;
 					if(Para2<0){AIN2=0;AIN1=1;}													//判断方向，最终效果是Encoder_Bias=0;
 					else{	AIN2=1;AIN1=0;}
 					Xianfu_Pwm();                         									//===PWM限幅 
