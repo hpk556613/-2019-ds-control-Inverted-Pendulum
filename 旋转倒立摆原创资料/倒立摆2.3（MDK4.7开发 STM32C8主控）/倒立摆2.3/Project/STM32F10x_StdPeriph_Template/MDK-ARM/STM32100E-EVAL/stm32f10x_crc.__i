@@ -1,5 +1,0 @@
--c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I..\ -I..\..\..\Libraries\CMSIS\CM3\CoreSupport -I..\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x -I..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\..\..\drivers -I..\..\..\drivers\OLED 
--I C:\Keil\ARM\RV31\INC 
--I C:\Keil\ARM\CMSIS\Include 
--I C:\Keil\ARM\Inc\ST\STM32F10x 
--DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ".\STM32100E-EVAL\stm32f10x_crc.o" --omf_browse ".\STM32100E-EVAL\stm32f10x_crc.crf" --depend ".\STM32100E-EVAL\stm32f10x_crc.d" "..\..\..\FWLIB\stm32f10x_crc.c"
